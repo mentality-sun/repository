@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*  全局设置*/
+        body {
+            background: #CEDDED;
+        }
+
+        /*设置整个大的布局的颜色*/
+        #ss {
+            background-color: #8888FF;
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            color: #4A4D4A;
+            /*文字颜色*/
+        }
+
+        /*第一个 div的所有属性值   */
+        .a {
+            background-color: #8888FF;
+            line-height: 150px;
+            text-align: center;
+            overflow: hidden;
+            width: 18%;
+            height: 150px;
+            top: 100px;
+            left: 80px;
+            margin: 80px 3% 80px 3%;
+            display: inline-block;
+        }
+
+        /*设置的 inline-block 属性，这四个div不论大小都占着一行，不会出现第五个div，8个div用相同的属性名**/
+
+        .c {
+            background-color: pink;
+            line-height: 150px;
+            text-align: center;
+            overflow: hidden;
+            width: 18%;
+            height: 150px;
+            top: 100px;
+            left: 80px;
+            margin: 80px 3% 80px 3%;
+            display: inline-block;
+        }
+
+        /*连接换色的div，style.backgroundColor只能获取内部颜色，写在div内部的，所以采用这种方法*/
+    </style>
+</head>
+<body>
+<div id="ss"><a href="/indexs/">返回</a><h2 align="center" id="sss">欢迎访问房间管理</h2></div>
+<div class="a" alt=""><a href="/a/">70201</a></div>
+<div class="a" alt=""><a href="/b/">70202</a></div>
+<div class="a" alt=""><a href="/c/">70203</a></div>
+<div class="a" alt=""><a href="/d/">70204</a></div>
+<div class="a" alt=""><a href="/e/">70205</a></div>
+<div class="a" alt=""><a href="/f/">70206</a></div>
+<div class="a" alt=""><a href="/g/">70207</a></div>
+<div class="a" alt=""><a href="/h/">70208</a></div>
+
+<script type="text/javascript">
+
+    var o = document.getElementsByClassName('a');//获取class名，s代表多个相同的class名
+    console.log(o);//从控制台打印
+    //利用for循环遍历所有class名相同的div，调用同一个函数，运用脚本知识
+    for (var i = 0; i < o.length; i++) {
+        o[i].onclick = function () {
+            if (this.className == "a") {
+                this.className = "c";
+            } else {
+                this.className = "a";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

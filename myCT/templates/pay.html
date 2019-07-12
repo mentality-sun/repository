@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>pay</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/pay.css">
+</head>
+<body>
+
+	<div id="first">
+		<button id="return" onclick="fanhui()">return</button>
+		<p>支付订单</p>
+		<button id="remove" onclick="quxiao()">remove</button>
+	</div>
+	<div id="middle" data-target="#navbarExample" data-offset="50" style=" overflow-x: hidden; overflow-y: auto; ">
+		<div id="detail">
+		<button type="button" id="aaaa" >查看详情</button>
+			<!-- <p id="aaaa" >查看详情</p> -->
+		</div>
+		<div id="text">
+			<table id="xiangqing" border="1px" cellspacing="5px">
+				<tr>
+					<td>序号</td>
+					<td>菜名</td>
+					<td>数量</td>
+					<td>价钱</td>
+				</tr>
+                {% for i in list %}
+                    <tr>
+                        <td>{{ i.0 }}</td>
+                        <td>{{ i.1 }}</td>
+                        <td>1</td>
+                        <td>{{ i.2 }}</td>
+                    </tr>
+                {% endfor %}
+{#				<tr>#}
+{#					<td>2</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>3</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>4</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>5</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>6</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>7</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>8</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>9</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+{#				<tr>#}
+{#					<td>10</td>#}
+{#					<td>糖醋鲤鱼</td>#}
+{#					<td>1</td>#}
+{#					<td>55.00</td>#}
+{#				</tr>#}
+			</table>
+		</div>
+		<div id="pay">
+			<h1 align="center">付款方式:</h1>
+			<form method="post" align="center">
+				<table border="1px" id="buy" cellspacing="2px">
+					<tr>
+						<td><img src="../static/image/1.png" alt="" class="img" align="center"></td>
+						<td class="way">支付宝</td>
+						<td class="clect"><input type="radio" value="1" name="method" checked="checked"
+						style="width:20px;height:20px" /></td>
+					</tr>
+					<tr>
+						<td><img src="../static/image/2.png" alt="" class="img" align="center"></td>
+						<td class="way">微信</td>
+						<td class="clect"><input type="radio" value="1" name="method" checked="checked"
+						style="width:20px;height:20px" /></td>
+					</tr>
+					<tr>
+						<td><img src="../static/image/4.png" alt="" class="img"></td>
+						<td class="way">银行卡</td>
+						<td class="clect"><input type="radio" value="1" name="method" checked="checked"
+						style="width:20px;height:20px" /></td>
+					</tr>
+					<tr >
+						<td colspan="3" id="item" align="center" >如果您使用现金支付，请联系前台</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<div id="last" align="center">
+		<a href="#" id="zhifu">确认支付￥9999.00</a>
+	</div>
+	<script>
+       var a = document.getElementById('aaaa');
+       var b = document.getElementById('text');
+       var c = true;
+       a.onclick=function() {
+       	if (c) {
+             b.style.height=50+"%";
+             c=false;
+
+       	}
+       };
+
+	</script>
+	<script>
+		 function fanhui(){
+       		location="/caidan/";
+       }
+	</script>
+</body>
+</html>

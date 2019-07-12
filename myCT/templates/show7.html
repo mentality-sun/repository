@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>pay</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/pay.css">
+</head>
+<body>
+
+	<div id="first">
+		<button id="return" onclick="fanhui()">return</button>
+		<p>房间信息</p>
+		<button id="remove" onclick="quxiao()">remove</button>
+	</div>
+	<div id="middle" data-target="#navbarExample" data-offset="50" style=" overflow-x: hidden; overflow-y: auto; ">
+		<div id="detail">
+		<button type="button" id="aaaa" >查看详情</button>
+			<!-- <p id="aaaa" >查看详情</p> -->
+		</div>
+		<div id="text">
+			<table id="xiangqing" border="1px" cellspacing="5px">
+				<tr>
+					<td>序号</td>
+					<td>菜名</td>
+					<td>数量</td>
+					<td>价钱</td>
+				</tr>
+                {% for i in list7 %}
+                    <tr>
+                        <td>{{ i.id }}</td>
+                        <td>{{ i.cname }}</td>
+                        <td>1</td>
+                        <td>{{ i.price }}</td>
+                    </tr>
+                {% endfor %}
+
+			</table>
+		</div>
+
+	</div>
+	<div id="last" align="center">
+		<a href="#" id="zhifu">房间70207</a>
+	</div>
+	<script>
+       var a = document.getElementById('aaaa');
+       var b = document.getElementById('text');
+       var c = true;
+       a.onclick=function() {
+       	if (c) {
+             b.style.height=50+"%";
+             c=false;
+
+       	}
+       };
+
+	</script>
+	<script>
+		 function fanhui(){
+       		location="/caidan/";
+       }
+	</script>
+</body>
+</html>

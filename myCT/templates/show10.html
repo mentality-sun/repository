@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="xiangqing" border="1px" cellspacing="5px">
+				<tr>
+					<td>序号</td>
+					<td>菜名</td>
+					<td>数量</td>
+					<td>价钱</td>
+				</tr>
+{% for i in list %}
+     <tr>
+                        <td></td>
+                        <td>{{ i.cname }}</td>
+                        <td>1</td>
+                        <td>{{ i.price }}</td>
+                    </tr>
+{% endfor %}
+</table>
+</body>
+</html>

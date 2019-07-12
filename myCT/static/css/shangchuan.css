@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#first{
+  height: 70%;
+  width: 100%;
+  position: absolute;
+  background: pink;
+}
+#picture{
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  background: red;
+  left: 0;
+  top: 0;
+}
+#tupian1{
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  background: orange;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  padding-left: 35%;
+  padding-top: 4%;
+}
+#tupian2{
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  background: pink;
+  left: 0;
+  top: 20%;
+}
+#name{
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  background: yellow;
+  left: 40%;
+  top: 0;
+
+}
+#caiming1{
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  background: pink;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  padding-left: 25%;
+  padding-top: 7%;
+}
+#caiming2{
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  background: blue;
+  left: 0;
+  top: 20%;
+  font-size: 30px;
+}
+.kuang{
+  width:70%;
+  height:10%;
+  position: absolute;
+  float: left;
+  left: 15%;
+  top: 30%;
+
+}
+#price{
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  background: red;
+  left:65%;
+  top: 0;
+}
+#jiage1{
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  background: green;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  padding-left: 25%;
+  padding-top: 7%;
+}
+#jiage2{
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  background: orange;
+  left: 0;
+  top: 20%;
+}
+#submit{
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  background: yellow;
+  right: 0;
+  top: 0;
+}
+.tijiao{
+  height: 10%;
+  width: 50%;
+  border-radius: 25%;
+  font-size: 25px;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+}

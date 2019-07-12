@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+{% block css %}
+
+
+{% endblock %}
+{% block content %}
+    <h1>菜名展示</h1>
+    <form action="/tianjia/" method="POST" enctype="multipart/form-data">
+                <a>菜名<input type="text" name="ming"/></a>
+                <a>价格<input type="text" name="price"/></a>
+                <a>图片<input type="file" name="tu"/></a>
+
+{#                <input type="file" name="tu"/>#}
+
+
+                <input type="submit" value="提交"/>
+
+                {{ msg }}
+            </form>
+{#    <div>#}
+{#        <input id="id_add" type="button" value="添加">#}
+{#     <a href="/tian/">添加</a>#}
+{#    </div>#}
+    <table border="1">
+        {#    对话框#}
+        <div class="modal hide">
+            <form method="post"action="/menu/">
+             <input name="id" type="text"placeholder="hide"/>
+            <input name="caption" type="text"placeholder="标题"/>
+            <input id="id_move" type="button"value="取消">
+            <input type="button" id="modal_ajax_submit" value="ajax确定">
+            </form>
+        </div>
+        {#    遮罩层#}
+        <div class="shade hide"></div>
+        <div class="remove hide">
+
+            <input id="id_remove" type="button" value="取消">
+            <input type="button" value="确定">
+        </div>
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>菜名</th>
+            <th>价格</th>
+            <th>图片</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for ma in menu_lists %}
+            <tr>
+                <td>{{ ma.id }}</td>
+                <td>{{ ma.name }}</td>
+                <td>{{ ma.price }}</td>
+                <td><img src="/{{ ma.path}}"
+                                 style="width:200px; height:200px; border-radius:50%; overflow:hidden;"></td>
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+    <div class="fenye">
+{#{{ strpage |safe}}#}
+        {{ strpage }}
+{#     <a href="/menu/?p=1">1</a>#}
+{#     <a href="/menu/?p=2">2</a>#}
+{#     <a href="/menu/?p=3">3</a>#}
+    </div>
+
+{% endblock %}
+
+
+
+
+{% block js %}
+    <script>
+    console.log("hahahahahhah");
+    console.log("111");
+        {#匿名函数#}
+        $(function () {
+            $('#m_id').addClass('active');
+            add();
+            addmove();
+            binddelet();
+            adit();
+            {#已启动就调用这个函数#}
+        });
+        SUBMIT_URL=null;
+
+        function add() {
+           /* $('tr').on('click','.td',function () {
+
+            })事件的绑定委托*/
+            $('#id_add').click(function () {
+                $('.modal,.shade').removeClass('hide');
+                SUBMIT_URL="/menu/"
+
+            });
+
+        }
+        function adit() {
+            $('tbody').on('click','.td_adit',function () {
+                $('.modal ,.shade').removeClass('hide');
+                SUBMIT_URL="/up_menu/"
+                var tds=$(this).parent().prevAll();
+                console.log(tds);
+            })
+
+        }
+         function addmove() {
+            $('#id_move,#id_remove').click(function () {
+                $('.modal,.shade,.remove').addClass('hide');
+
+            });
+
+        }
+        function binddelet() {
+            $('td.del').click(function () {
+                $('.remove,.shade').removeClass('hide');
+            })
+        }
+
+    </script>
+
+{% endblock %}

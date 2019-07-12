@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#first{
+	height: 13%;
+	width: 100%;
+	font-size: 40px;
+	background: #7FFFD4;
+	margin-top: 0;
+	position: absolute;
+}
+#return{
+	height: 45%;
+	width: 5%;
+	border: none;
+	border-radius: 20%;
+	display: inline-block;
+	background-color: #00FF7F;
+}
+#remove{
+	height: 45%;
+	width: 5%;
+	border: none;
+	border-radius: 20%;
+	display: inline-block;
+	background-color: #00FF7F;
+	padding-right: 0%;
+	float: right;
+
+}
+#aaaa{
+	background: aqua;
+	height: 70%;
+	width: 80%;
+	font-size: 30px;
+	margin-left: 25%;
+}
+p{
+	padding-left: 40%;
+	text-align: center;
+	padding-top: 2%;
+	display: inline-block;
+	position: absolute;
+
+}
+#middle{
+	height: 72%;
+	width: 100%;
+	top: 13%;
+	position: absolute;
+	background: #F5F5F5;
+}
+#detail{
+	height: 70px;
+	width: 22%;
+	/*background: pink;*/
+	padding-top: 2px;
+	left: 37%;
+	font-size: 30px;
+	position: relative;
+}
+#text{
+	height: 9%;
+	width: 50%;
+	/*background: #9ACD32;*/
+	left: 25%;
+	padding-top: 2px;
+	overflow: auto;
+	position: relative;
+	transition:all 0.5s;
+
+}
+#xiangqing{
+	height: 75%;
+	width: 100%;
+	padding-left: auto;
+	text-align: center;
+
+}
+tr{
+	height: 40px;
+}
+#pay{
+	height: 60%;
+	width: 50%;
+	/*background: green;*/
+	padding-top: 2px;
+	overflow: auto;
+	padding-left: 30%;
+	position: absolute;
+}
+#buy{
+	padding-right: 2%;
+	padding-left: 2%;
+	text-align: center;
+	border:none;   <!-- 边框 -->
+    margin:none;   <!-- 外边距 -->
+    padding:0px;   <!-- 内边距-->
+}
+.way{
+	width: 70%;
+	height: 20%;
+	font-size: 30px;
+}
+.clect{
+	width: 10%;
+}
+#item{
+	color: red;
+	font-size: 20px;
+}
+#last{
+	height: 15%;
+	width: 100%;
+	background: #7FFFD4;
+	bottom:0;
+	font-size: 30px;
+	overflow:hidden;
+	position: absolute;
+}
+#zhifu{
+	text-decoration : none;
+	color: white;
+	position: absolute;
+	left: 40%;
+	padding-top: 2%;
+}
