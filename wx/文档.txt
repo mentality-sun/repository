@@ -1,0 +1,5 @@
+
+receive.py主要是接收信息并处理
+handle.py 文件主要是调用receive.py 将receive.py返回的数据二次处理
+返回数据到客户端
+main.py 启动程序
